@@ -3,7 +3,9 @@
 програмирования*/
 
 #include <iostream>
+#include "version.hpp"
 
 int main(int argc, char *argv[]){
+	std::cout << "Версия № " << get_version << std::endl;
 	return 0;
 }
