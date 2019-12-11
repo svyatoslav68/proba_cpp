@@ -4,8 +4,15 @@
 
 #include <iostream>
 #include "version.hpp"
+#include "option_app.hpp"			
 
 int main(int argc, char *argv[]){
-	std::cout << "Версия № " << get_version << std::endl;
+	optionApp ops;
+	ops.exec(argc, argv);
+	if (ops.isHelp()){
+		//std::cout << "Помощь по программе " << argv[0] << std::endl;
+		exit(0);
+	}
+	std::cout << "Версия № " << get_version() << "; count = " << ops.getCount() << std::endl;
 	return 0;
 }
