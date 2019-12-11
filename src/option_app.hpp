@@ -16,8 +16,10 @@ public:
 	void exec(int argc, char *argv[]);
 	bool isHelp();
 	int getCount();
+	std::string getNameFile();
 private:
 	po::options_description op_desc; // Описание опций и ключей 
+	po::positional_options_description pd_desc;
 	po::variables_map op_store;	// Контейенер для хранения полученных опций
 };
 #endif // OPTION_APP_HPP

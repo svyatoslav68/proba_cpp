@@ -12,6 +12,7 @@ optionApp::optionApp(){
 		("help,h", "Show help")
 		("count,c", po::value<int>(), "Counter")
 		;
+	pd_desc.add("input_file", 1);
 }
 
 void optionApp::exec(int argc, char *argv[]){
@@ -27,6 +28,16 @@ bool optionApp::isHelp(){
 }
 
 int optionApp::getCount(){
-	return op_store["count"].as<int>();
+	if (op_store.count("count"))
+		return op_store["count"].as<int>();
+	else
+		return -1;
+}
+
+std::string optionApp::getNameFile(){
+	if (op_store.count("input_file"))
+		return op_store["input_file"].as<std::string>();
+	else
+		return "";
 }
 

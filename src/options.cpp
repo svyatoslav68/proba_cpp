@@ -13,6 +13,6 @@ int main(int argc, char *argv[]){
 		//std::cout << "Помощь по программе " << argv[0] << std::endl;
 		exit(0);
 	}
-	std::cout << "Версия № " << get_version() << "; count = " << ops.getCount() << std::endl;
+	std::cout << "Версия № " << get_version() << "; count = " << ops.getCount() << "; name_file = " << ops.getNameFile() << std::endl;
 	return 0;
 }
