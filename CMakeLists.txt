@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
 
-project(proba_cpp VERSION 0.2)
+project(proba_cpp VERSION 0.3)
+
+message(STATUS ${CMAKE_MODULE_PATH})
 
 SET(SOURCES_DIR src)
 
